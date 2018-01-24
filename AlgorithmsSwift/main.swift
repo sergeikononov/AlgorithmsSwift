@@ -8,5 +8,5 @@
 
 import Foundation
 
-print(GCD(first: 4, second: 8))
+print(FindPrimes(max_number: 121))
 
