@@ -8,5 +8,5 @@
 
 import Foundation
 
-print(FindPrimes(max_number: 121))
+print(UseRectangleRule(function, xmin: 0, xmax: 5, num_intervals: 10))
 

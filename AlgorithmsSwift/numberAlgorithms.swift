@@ -97,15 +97,28 @@ func FindPrimes(max_number: Int) -> Array<Int> {
       for index in 2...max_number {
             if (!is_composite[index]) {
                   primes.append(index)
+                  
             }
       }
+      primes.removeLast()
       return primes
+}
+
+//Input Function
+func function(x:Float) -> Float {
+      return 1+x+sin(2*x)
+}
+
+func UseRectangleRule(_ function: (Float) -> Float, xmin:Float, xmax:Float, num_intervals:Int) -> Float {
+      let dx: Float = (xmax-xmin) / Float(num_intervals)
+      var total_area:Float = 0
+      var x = xmin
       
-      
-      
-      
-      
-      
+      for _ in 0...num_intervals {
+            total_area = Float(total_area) + dx * function(x)
+            x += dx
+      }
+      return total_area
 }
 
 
